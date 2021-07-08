@@ -73,6 +73,8 @@ contract JOJO is IERC20, Ownable {
     }
 
     constructor (address _router, address _poolAddr) public {
+        require(_poolAddr != address(0), "Zero address");
+
         poolAddr = _poolAddr;
 
         _rOwned[_msgSender()] = _rTotal;
@@ -501,14 +503,17 @@ contract JOJO is IERC20, Ownable {
     }
 
     function setTaxFeePercent(uint256 taxFee) external onlyOwner {
+        require(taxFee <= 100, "TaxFee exceed 100");
         _taxFee = taxFee;
     }
 
     function setLiquidityFeePercent(uint256 liquidityFee) external onlyOwner {
+        require(liquidityFee <= 100, "LiquidityFee exceed 100");
         _liquidityFee = liquidityFee;
     }
 
     function setPoolFeePercent(uint256 poolFee) external onlyOwner {
+        require(poolFee <= 100, "PoolFee exceed 100");
         _poolFee = poolFee;
     }
 
@@ -535,6 +540,7 @@ contract JOJO is IERC20, Ownable {
 
     function setPoolAddr(address _poolAddr) public onlyOwner {
         require(_poolAddr != address(0), "zero_address");
+        _isExcludedFromFee[poolAddr] = false;
         poolAddr = _poolAddr;
         _isExcludedFromFee[poolAddr] = true;
     }
