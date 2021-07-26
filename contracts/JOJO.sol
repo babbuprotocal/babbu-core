@@ -24,7 +24,7 @@ contract JOJO is IERC20, Ownable {
     address[] private _excluded;
 
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 1000000000 * 10**6 * 10**9;
+    uint256 private _tTotal = 1000000 * 10**6 * 10**9;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
     uint256 private _tPoolTotal;
@@ -37,10 +37,10 @@ contract JOJO is IERC20, Ownable {
     string private _symbol = "JOJO";
     uint8 private _decimals = 9;
 
-    uint256 public _taxFee = 2;
+    uint256 public _taxFee = 4;
     uint256 private _previousTaxFee = _taxFee;
 
-    uint256 public _liquidityFee = 5;
+    uint256 public _liquidityFee = 3;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _poolFee = 3;
@@ -52,8 +52,9 @@ contract JOJO is IERC20, Ownable {
     bool inSwapAndLiquify;
     bool public swapAndLiquifyEnabled = true;
 
-    uint256 public _maxTxAmount = 5000000 * 10**6 * 10**9;
-    uint256 public numTokensSellToAddToLiquidity = 500000 * 10**6 * 10**9;
+    // 100e
+    uint256 public _maxTxAmount = 10000 * 10**6 * 10**9;
+    uint256 public numTokensSellToAddToLiquidity = 500 * 10**6 * 10**9;
 
     // Prevent front run buy
     uint256 public startBuyBlock;
@@ -92,7 +93,7 @@ contract JOJO is IERC20, Ownable {
         _isExcludedFromFee[address(this)] = true;
         _isExcludedFromFee[poolAddr] = true;
 
-        startBuyBlock = block.number + 20 * 30;
+        startBuyBlock = block.number + 20 * 15;
         emit Transfer(address(0), _msgSender(), _tTotal);
     }
 
