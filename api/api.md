@@ -1,7 +1,11 @@
 ### Api Stats
 
 - url: `https://jojo.fun/service/proj/main/stats`
-- response
+- request:
+
+`NONE`
+
+- response data
 
 ```
 
@@ -16,8 +20,9 @@
 
 ```
 
+- response Parameter
 
-| Field| Brief |
+| name | desc |
 | --- | --- |
 | pool_token_balance | Stake Pool Token Balance |
 | telegram_users | telegram users |
