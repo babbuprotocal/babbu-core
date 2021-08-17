@@ -9,13 +9,34 @@
 
 ```
 
-{
-    "pool_token_balance": "18172517111",
-    "telegram_users": "48,680",
-    "twitter_users": "47,500",
-    "burn_ratio": "61.46",
-    "burn_token_amount": "614600000000000"
-}
+[
+    {
+        "name": "Total Mining Pool",
+        "value": "18512249024",
+        "prefix": ""
+    },
+    {
+        "name": "Total Supply to Black Hole",
+        "value": "61.48%",
+        "prefix": ""
+    },
+    {
+        "name": "Twitter Followers",
+        "value": "47,900",
+        "prefix": ""
+    },
+    {
+        "name": "Telegram Members",
+        "value": "48,500",
+        "prefix": ""
+    },
+    {
+        "name": "Burn Token Amount",
+        "value": "614800000000000",
+        "prefix": ""
+    }
+]
+
 
 
 ```
@@ -24,8 +45,8 @@
 
 | name | desc |
 | --- | --- |
-| pool_token_balance | Stake Pool Token Balance |
-| telegram_users | telegram users |
-| twitter_users | twitter follows |
-| burn_ratio | burn ratio |
-| burn_token_amount | Burn Token Amount |
+| Total Mining Pool | Stake Pool Token Balance |
+| Telegram Members | telegram users |
+| Twitter Followers | twitter follows |
+| Total Supply to Black Hole | burn ratio |
+| Burn Token Amount | Burn Token Amount |
