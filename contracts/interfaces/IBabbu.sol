@@ -1,6 +1,6 @@
 pragma solidity >=0.6.2;
 
-interface IJoJo {
+interface IBabbu {
 
       function isExcludedFromFee(address account) external view returns(bool);
 
