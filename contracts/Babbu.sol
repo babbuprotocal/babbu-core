@@ -10,7 +10,7 @@ import "./interfaces/IUniswapV2Router02.sol";
 import "./interfaces/IUniswapV2Factory.sol";
 
 
-contract JOJO is IERC20, Ownable {
+contract BABBU is IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -33,8 +33,8 @@ contract JOJO is IERC20, Ownable {
     address public poolAddr;
     address payable public charityAddress = 0x1396b4216017251e0492995E5158573567f7bb89;
 
-    string private _name = "JOJO";
-    string private _symbol = "JOJO";
+    string private _name = "BABBU";
+    string private _symbol = "BABU";
     uint8 private _decimals = 9;
 
     uint256 public _taxFee = 4;
