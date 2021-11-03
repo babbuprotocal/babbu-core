@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT - Nov.2021
 pragma solidity >=0.4.25 <0.7.0;
 
 contract Migrations {
